@@ -3,27 +3,39 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <title>The Matrix Advanced Environment</title>
+        <title>Advanced Matrix — Lively Wallpaper</title>
     </head>
 <body>
-    <!-- CRT Overlay (topmost) -->
+    <!-- CRT Overlay (topmost visual layer) -->
     <div id="crt-overlay"></div>
     
     <div id="container">
-        <!-- Solid black background base -->
+        <!-- Solid black base -->
         <div id="bg"></div>
         
-        <!-- Hidden canvas for sampling image brightness (Matrix Vision) -->
+        <!-- Hidden canvas: image pixel sampler for Matrix Vision -->
         <canvas id="sample-canvas" style="display:none;"></canvas>
+        
+        <!-- Hidden video: webcam source for Webcam Vision -->
+        <video id="webcam-feed" autoplay playsinline muted style="display:none;"></video>
 
         <!-- Main Matrix rain canvas -->
         <canvas id="c"></canvas>
+
+        <!-- Click Ripple canvas (sits above matrix rain) -->
+        <canvas id="ripple-canvas"></canvas>
         
-        <!-- Intro Text -->
+        <!-- Intro Text Typewriter -->
         <div id="intro-text"></div>
 
         <!-- Cyberpunk Clock -->
         <div id="clock">00:00:00</div>
+
+        <!-- Hacker Terminal (bottom-left corner) -->
+        <div id="terminal">
+            <div id="terminal-header">▶ SYSTEM_ACCESS // root@matrix:~#</div>
+            <div id="terminal-log"></div>
+        </div>
     </div>
     
     <script src="script.js"></script>

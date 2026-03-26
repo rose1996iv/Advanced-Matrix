@@ -20,7 +20,8 @@
     "items": [
       "Solid Black",
       "Image (Normal)",
-      "Matrix Vision (Image via Rain)"
+      "Matrix Vision™ (Image via Rain)",
+      "Webcam Vision™ (Live Camera via Rain)"
     ]
   },
   "bgImageStr": {
@@ -75,6 +76,11 @@
     "value": true,
     "text": "Interactive Mouse (Dodge & Glow)"
   },
+  "clickRipple": {
+    "type": "checkbox",
+    "value": true,
+    "text": "Click Ripple (Character Explosion)"
+  },
   "audioReactive": {
     "type": "checkbox",
     "value": true,
@@ -93,6 +99,11 @@
     "type": "checkbox",
     "value": true,
     "text": "Play \"Wake Up\" Intro Sequence"
+  },
+  "hackerTerminal": {
+    "type": "checkbox",
+    "value": true,
+    "text": "Hacker Terminal Console"
   },
   "retroCRT": {
     "type": "checkbox",
