@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>The Matrix Advanced Environment</title>
+    </head>
+<body>
+    <!-- CRT Overlay (topmost) -->
+    <div id="crt-overlay"></div>
+    
+    <div id="container">
+        <!-- Solid black background base -->
+        <div id="bg"></div>
+        
+        <!-- Hidden canvas for sampling image brightness (Matrix Vision) -->
+        <canvas id="sample-canvas" style="display:none;"></canvas>
+
+        <!-- Main Matrix rain canvas -->
+        <canvas id="c"></canvas>
+        
+        <!-- Intro Text -->
+        <div id="intro-text"></div>
+
+        <!-- Cyberpunk Clock -->
+        <div id="clock">00:00:00</div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

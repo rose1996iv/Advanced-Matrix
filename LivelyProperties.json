@@ -1,0 +1,115 @@
+{
+  "heading_visual": {
+    "type": "label",
+    "value": "── Visual Settings ──"
+  },
+  "matrixColor": {
+    "text": "Matrix Color",
+    "type": "color",
+    "value": "#00FF46"
+  },
+  "rainbowMode": {
+    "type": "checkbox",
+    "value": false,
+    "text": "Rainbow Mode"
+  },
+  "bgType": {
+    "type": "dropdown",
+    "value": 0,
+    "text": "Background Type",
+    "items": [
+      "Solid Black",
+      "Image (Normal)",
+      "Matrix Vision (Image via Rain)"
+    ]
+  },
+  "bgImageStr": {
+    "type": "folderDropdown",
+    "folder": "images",
+    "value": "watermark.png",
+    "text": "Background / Vision Image"
+  },
+  "bgOpacity": {
+    "type": "slider",
+    "value": 30,
+    "min": 0,
+    "max": 100,
+    "tick": 1,
+    "text": "Image Opacity (Normal mode only, %)"
+  },
+  "heading_content": {
+    "type": "label",
+    "value": "── Content Settings ──"
+  },
+  "charSet": {
+    "type": "dropdown",
+    "value": 0,
+    "text": "Character Set",
+    "items": [
+      "Custom Text (Below)",
+      "Matrix Binary (0 / 1)",
+      "Japanese Kana"
+    ]
+  },
+  "customText": {
+    "type": "textbox",
+    "value": "BawipaNaThaGottistgut神は善です神是良善的",
+    "text": "Custom Characters"
+  },
+  "showClock": {
+    "type": "checkbox",
+    "value": true,
+    "text": "Show Cyberpunk Clock"
+  },
+  "heading_advanced": {
+    "type": "label",
+    "value": "── Advanced Effects ──"
+  },
+  "parallax3D": {
+    "type": "checkbox",
+    "value": true,
+    "text": "3D Parallax Depth Layers"
+  },
+  "interactiveMouse": {
+    "type": "checkbox",
+    "value": true,
+    "text": "Interactive Mouse (Dodge & Glow)"
+  },
+  "audioReactive": {
+    "type": "checkbox",
+    "value": true,
+    "text": "Audio Reactive (Color / Speed)"
+  },
+  "gravityBass": {
+    "type": "checkbox",
+    "value": true,
+    "text": "Gravity Reverse on Heavy Bass"
+  },
+  "heading_cinematic": {
+    "type": "label",
+    "value": "── Cinematic / Hacker Effects ──"
+  },
+  "playIntro": {
+    "type": "checkbox",
+    "value": true,
+    "text": "Play \"Wake Up\" Intro Sequence"
+  },
+  "retroCRT": {
+    "type": "checkbox",
+    "value": true,
+    "text": "Retro CRT Scanlines & Glow"
+  },
+  "glitchMode": {
+    "type": "checkbox",
+    "value": true,
+    "text": "Random Screen Glitch"
+  },
+  "matrixSpeed": {
+    "type": "slider",
+    "value": 50,
+    "min": 10,
+    "max": 150,
+    "tick": 5,
+    "text": "Rain Speed Delay (ms, lower = faster)"
+  }
+}

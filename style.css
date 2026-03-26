@@ -1,0 +1,64 @@
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body {
+    background: #000; overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#container {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+}
+
+#bg {
+    position: absolute; top: -5%; left: -5%;
+    width: 110%; height: 110%; background-size: cover;
+    background-position: center; background-repeat: no-repeat;
+    z-index: 1; transition: transform 0.1s ease-out, opacity 0.5s; opacity: 0.3;
+}
+
+#intro-text {
+    position: absolute; top: 10%; left: 5%;
+    width: 90%; color: #00ff46; font-size: 2.5rem; font-weight: bold;
+    z-index: 5; text-shadow: 0 0 15px #00ff46;
+    pointer-events: none; white-space: pre-wrap; line-height: 1.8;
+}
+
+canvas {
+    display: block; position: absolute; top: 0; left: 0; z-index: 2;
+}
+
+#clock {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    color: #fff; font-size: 8rem; font-weight: bold; text-shadow: 0 0 20px #00ff46;
+    z-index: 3; pointer-events: none; display: none; mix-blend-mode: screen;
+}
+
+/* Retro CRT scanlines + chromatic aberration overlay */
+#crt-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 10; pointer-events: none;
+    background:
+        linear-gradient(rgba(18,16,16,0) 50%, rgba(0,0,0,0.28) 50%),
+        linear-gradient(90deg, rgba(255,0,0,0.05), rgba(0,255,0,0.02), rgba(0,0,255,0.05));
+    background-size: 100% 4px, 6px 100%;
+    box-shadow: inset 0 0 120px rgba(0,0,0,0.85);
+    border-radius: 12px;
+    display: none;
+}
+
+/* Glitch animation */
+.glitched {
+    animation: glitch-anim 0.18s cubic-bezier(.25,.46,.45,.94) both infinite;
+    filter: hue-rotate(90deg) contrast(150%) brightness(120%);
+}
+
+@keyframes glitch-anim {
+    0%   { transform: translate(0) skew(0) }
+    20%  { transform: translate(-10px, 5px) skew(8deg) }
+    40%  { transform: translate(10px, -5px) skew(-8deg) }
+    60%  { transform: translate(14px, 4px) skew(4deg) }
+    80%  { transform: translate(-14px, -4px) skew(-4deg) }
+    100% { transform: translate(0) skew(0) }
+}
