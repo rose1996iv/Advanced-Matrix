@@ -32,7 +32,20 @@ canvas { display: block; position: absolute; top: 0; left: 0; }
     color: #fff; font-size: 8rem; font-weight: bold;
     text-shadow: 0 0 20px #00ff46; z-index: 4;
     pointer-events: none; display: none; mix-blend-mode: screen;
+    white-space: nowrap;
 }
+
+#clock .clock-time   { display: inline; }
+#clock .clock-period {
+    display: inline-block;
+    font-size: 2.8rem;
+    font-weight: 600;
+    vertical-align: super;
+    opacity: 0.75;
+    letter-spacing: 0.05em;
+    margin-left: 6px;
+}
+
 
 /* ── Hacker Terminal ── */
 #terminal {

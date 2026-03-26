@@ -62,6 +62,15 @@
     "value": true,
     "text": "Show Cyberpunk Clock"
   },
+  "clockFormat": {
+    "type": "dropdown",
+    "value": 0,
+    "text": "Clock Format",
+    "items": [
+      "24-Hour (00:00:00)",
+      "12-Hour AM/PM (12:00:00 PM)"
+    ]
+  },
   "heading_advanced": {
     "type": "label",
     "value": "── Advanced Effects ──"

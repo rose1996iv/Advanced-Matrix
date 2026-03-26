@@ -19,6 +19,7 @@ var root = {
     interactiveMouse: true,
     audioReactive:    true,
     showClock:        true,
+    clockFormat:      0,        // 0=24h, 1=12h
     matrixSpeed:      50,
     playIntro:        true,
     retroCRT:         true,
@@ -268,14 +269,31 @@ window.onresize = initMatrix;
 function updateClock() {
     if (!root.showClock || introActive) { clockDiv.style.display = 'none'; return; }
     clockDiv.style.display = 'block';
-    var now = new Date();
-    clockDiv.innerText = String(now.getHours()).padStart(2,'0') + ':' +
-                         String(now.getMinutes()).padStart(2,'0') + ':' +
-                         String(now.getSeconds()).padStart(2,'0');
-    var mc = root.matrixColor;
-    clockDiv.style.textShadow = root.rainbowMode
+    var now  = new Date();
+    var h    = now.getHours();
+    var m    = String(now.getMinutes()).padStart(2,'0');
+    var s    = String(now.getSeconds()).padStart(2,'0');
+    var mc   = root.matrixColor;
+    var glow = root.rainbowMode
         ? "0 0 20px #FFF"
         : "0 0 25px rgb("+mc.r+","+mc.g+","+mc.b+")";
+
+    if (root.clockFormat === 1) {
+        // 12-hour format with AM / PM
+        var period = h >= 12 ? 'PM' : 'AM';
+        var h12    = h % 12 || 12;
+        clockDiv.innerHTML =
+            '<span class="clock-time">' +
+            String(h12).padStart(2,'0') + ':' + m + ':' + s +
+            '</span><span class="clock-period"> ' + period + '</span>';
+    } else {
+        // 24-hour format
+        clockDiv.innerHTML =
+            '<span class="clock-time">' +
+            String(h).padStart(2,'0') + ':' + m + ':' + s +
+            '</span>';
+    }
+    clockDiv.style.textShadow = glow;
 }
 setInterval(updateClock, 1000);
 
@@ -473,6 +491,7 @@ function livelyPropertyListener(name, val) {
         case "interactiveMouse":  root.interactiveMouse = val; break;
         case "audioReactive":     root.audioReactive    = val; break;
         case "showClock":         root.showClock        = val; updateClock(); break;
+        case "clockFormat":        root.clockFormat      = val; updateClock(); break;
         case "matrixSpeed":
             root.matrixSpeed = val;
             if(drawInterval) clearInterval(drawInterval);
