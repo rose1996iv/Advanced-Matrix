@@ -12,7 +12,11 @@
 ![Lively](https://img.shields.io/badge/Lively%20Wallpaper-Compatible-brightgreen)
 ![Features](https://img.shields.io/badge/Features-11-blueviolet)
 
+**[🌐 Live Demo](https://rose1996iv.github.io/Advanced-Matrix/)** &nbsp;|&nbsp; **[⬇️ Download](https://github.com/rose1996iv/Advanced-Matrix/archive/refs/heads/main.zip)** &nbsp;|&nbsp; **[⭐ Star on GitHub](https://github.com/rose1996iv/Advanced-Matrix)**
+
 </div>
+
+> 🟢 **A cinematic, interactive Matrix digital rain wallpaper** for Windows — powered by HTML5 Canvas. Features 11 immersive effects including **Matrix Vision™** (your image rendered through the rain), **Webcam Vision™** (live camera as Matrix code), real-time **Audio Reactivity**, **Gravity Reversal** on bass drops, **Click Ripple Explosions**, an animated **Hacker Terminal Console**, **3D Parallax** depth layers, **Mouse Interaction**, **Retro CRT Scanlines**, **Random Glitch Effects**, and a **"Wake Up" Intro Sequence** — all configurable from a single control panel inside Lively Wallpaper.
 
 ---
 
